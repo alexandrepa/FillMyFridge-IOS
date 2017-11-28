@@ -9,7 +9,7 @@
 import Foundation
 
 class Repas {
-    var id:Int
+    var id:Int = 0
     var nom:String
     var plats:Array<Plat> = Array()
     var numberOfPersonnes:Int

@@ -9,7 +9,7 @@
 import Foundation
 
 class ListeMenus  {
-    var id : Int
+    var id : Int = 0
     var dateDebut : Date
     var dateFin : Date
     var menus : Array<Menu> = Array()

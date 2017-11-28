@@ -9,7 +9,7 @@
 import Foundation
 
 class Menu {
-    var id: Int
+    var id: Int = 0
     var nom: String
     var date: Date
     var repas : Array<Repas> = Array()
