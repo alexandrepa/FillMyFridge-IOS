@@ -15,6 +15,8 @@
 		107A13431FCE1C5B00436568 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A13421FCE1C5B00436568 /* Tag.swift */; };
 		107A13451FCE204000436568 /* MealNumberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A13441FCE204000436568 /* MealNumberTableViewController.swift */; };
 		107A13471FCE20EF00436568 /* DatePickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A13461FCE20EF00436568 /* DatePickViewController.swift */; };
+		10928CD21FCF5E2E00F33600 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10928CD11FCF5E2E00F33600 /* MealTableViewCell.swift */; };
+		10928CD41FCF6E1700F33600 /* PersonNumberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10928CD31FCF6E1700F33600 /* PersonNumberTableViewController.swift */; };
 		1096B9981FCE01170005A202 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1096B9971FCE01170005A202 /* AppDelegate.swift */; };
 		1096B99A1FCE01170005A202 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1096B9991FCE01170005A202 /* ViewController.swift */; };
 		1096B99D1FCE01170005A202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1096B99B1FCE01170005A202 /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 		107A13421FCE1C5B00436568 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Tag.swift; path = Objects/Tag.swift; sourceTree = "<group>"; };
 		107A13441FCE204000436568 /* MealNumberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MealNumberTableViewController.swift; path = Controllers/MealNumberTableViewController.swift; sourceTree = "<group>"; };
 		107A13461FCE20EF00436568 /* DatePickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DatePickViewController.swift; path = Controllers/DatePickViewController.swift; sourceTree = "<group>"; };
+		10928CD11FCF5E2E00F33600 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		10928CD31FCF6E1700F33600 /* PersonNumberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonNumberTableViewController.swift; path = Controllers/PersonNumberTableViewController.swift; sourceTree = "<group>"; };
 		1096B9941FCE01160005A202 /* FillMyFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FillMyFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1096B9971FCE01170005A202 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1096B9991FCE01170005A202 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				107A13421FCE1C5B00436568 /* Tag.swift */,
 				107A13441FCE204000436568 /* MealNumberTableViewController.swift */,
 				107A13461FCE20EF00436568 /* DatePickViewController.swift */,
+				10928CD11FCF5E2E00F33600 /* MealTableViewCell.swift */,
+				10928CD31FCF6E1700F33600 /* PersonNumberTableViewController.swift */,
 			);
 			path = FillMyFridge;
 			sourceTree = "<group>";
@@ -167,10 +173,12 @@
 				1096B9A01FCE01170005A202 /* FillMyFridge.xcdatamodeld in Sources */,
 				1096B99A1FCE01170005A202 /* ViewController.swift in Sources */,
 				1096B9981FCE01170005A202 /* AppDelegate.swift in Sources */,
+				10928CD41FCF6E1700F33600 /* PersonNumberTableViewController.swift in Sources */,
 				107A13411FCE1BB800436568 /* Ingredient.swift in Sources */,
 				107A13391FCE186C00436568 /* Menu.swift in Sources */,
 				107A13431FCE1C5B00436568 /* Tag.swift in Sources */,
 				107A13451FCE204000436568 /* MealNumberTableViewController.swift in Sources */,
+				10928CD21FCF5E2E00F33600 /* MealTableViewCell.swift in Sources */,
 				107A133D1FCE1AEF00436568 /* Plat.swift in Sources */,
 				107A13471FCE20EF00436568 /* DatePickViewController.swift in Sources */,
 				107A133B1FCE19DD00436568 /* Repas.swift in Sources */,

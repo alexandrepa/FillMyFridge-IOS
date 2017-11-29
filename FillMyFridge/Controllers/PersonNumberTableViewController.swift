@@ -1,34 +1,19 @@
 //
-//  MealNumberTableViewController.swift
+//  PersonNumberTableViewController.swift
 //  FillMyFridge
 //
-//  Created by alexandre patelli on 28/11/2017.
+//  Created by alexandre patelli on 29/11/2017.
 //  Copyright © 2017 alexandre patelli. All rights reserved.
 //
 
 import UIKit
 
-class MealNumberTableViewController: UITableViewController {
-    var dateDebut : Date = Date()
-    var dateFin : Date = Date()
+class PersonNumberTableViewController: UITableViewController {
     var listeMenus : ListeMenus!
-    var nbSections : Int = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("DateDebut:"+dateDebut.description)
-        print("DateFin:"+dateFin.description)
-        listeMenus = ListeMenus(dateDebut, dateFin)
-        nbSections = listeMenus.getNumberOfMeals()
-        var menus = [Menu]()
-        
-        
-        for index in 0...nbSections-1 {
-            let date:Date = Calendar.current.date(byAdding: .day, value: index, to: dateDebut)!
-            menus.append(Menu(listeMenus.getStringDate(date), date))
-        }
-        listeMenus.menus = menus
-
+        print("ListeMenu:"+String(listeMenus.menus[1].repas.count))
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -46,31 +31,23 @@ class MealNumberTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return nbSections
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MealTableViewCell", for: indexPath) as? MealTableViewCell
-        let menu : Menu = listeMenus.menus[indexPath.row]
-        // Configure the cell...
-        cell?.labelDate.text = menu.nom
-        cell?.menu = menu
-        //cell?.sliderNumberMeal.addTarget(self, action: <#T##Selector#>, for: <#T##UIControlEvents#>)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        return cell!
+        // Configure the cell...
+
+        return cell
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! PersonNumberTableViewController
-        destinationVC.listeMenus = listeMenus
-    }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.

@@ -32,7 +32,13 @@ class ListeMenus  {
         self.dateFin = dateFin
     }
     func getNumberOfMeals() -> Int {
-        return Int((self.dateDebut.timeIntervalSince1970 - self.dateFin.timeIntervalSince1970) / (1000 * 60 * 60 * 24) + 1)
+        return Calendar.current.dateComponents([.day], from: dateDebut, to: dateFin).day! + 1
+    }
+    func getStringDate(_ date:Date) -> String {
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "dd/MM"
+        let resultString = inputFormatter.string(from: date)
+        return resultString
     }
     
     

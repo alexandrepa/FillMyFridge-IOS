@@ -12,11 +12,15 @@ class DatePickViewController: UIViewController {
     var dateDebut : Date = Date()
     var dateFin : Date = Date()
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
+    
+
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -34,7 +38,7 @@ class DatePickViewController: UIViewController {
     }
     
     @IBAction func buttonClicked(_ sender: UIButton) {
-        print("DateDebut:"+dateDebut.description)
+        
     }
     
     /*
@@ -46,5 +50,20 @@ class DatePickViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! MealNumberTableViewController
+        destinationVC.dateDebut = dateDebut
+        destinationVC.dateFin = dateFin
+        
+        
+    }
+    
+    /*func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        let destinationVC = segue.destinationViewController as! MealNumberTableViewController
+        destinationVC.dateDebut = dateDebut
+        destinationVC.dateFin = dateFin
+    }*/
 
 }
