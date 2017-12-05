@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10534A1F1FD732E000D9CFEA /* PersonNumberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10534A1E1FD732E000D9CFEA /* PersonNumberTableViewCell.swift */; };
+		10534A211FD73D4500D9CFEA /* TagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10534A201FD73D4500D9CFEA /* TagTableViewController.swift */; };
 		107A13351FCE144900436568 /* ListeMenus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A13341FCE144900436568 /* ListeMenus.swift */; };
 		107A13391FCE186C00436568 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A13381FCE186C00436568 /* Menu.swift */; };
 		107A133B1FCE19DD00436568 /* Repas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A133A1FCE19DD00436568 /* Repas.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10534A1E1FD732E000D9CFEA /* PersonNumberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonNumberTableViewCell.swift; sourceTree = "<group>"; };
+		10534A201FD73D4500D9CFEA /* TagTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TagTableViewController.swift; path = Controllers/TagTableViewController.swift; sourceTree = "<group>"; };
 		107A13341FCE144900436568 /* ListeMenus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListeMenus.swift; path = Objects/ListeMenus.swift; sourceTree = "<group>"; };
 		107A13381FCE186C00436568 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Menu.swift; path = Objects/Menu.swift; sourceTree = "<group>"; };
 		107A133A1FCE19DD00436568 /* Repas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Repas.swift; path = Objects/Repas.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 				107A13461FCE20EF00436568 /* DatePickViewController.swift */,
 				10928CD11FCF5E2E00F33600 /* MealTableViewCell.swift */,
 				10928CD31FCF6E1700F33600 /* PersonNumberTableViewController.swift */,
+				10534A1E1FD732E000D9CFEA /* PersonNumberTableViewCell.swift */,
+				10534A201FD73D4500D9CFEA /* TagTableViewController.swift */,
 			);
 			path = FillMyFridge;
 			sourceTree = "<group>";
@@ -170,6 +176,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				107A13351FCE144900436568 /* ListeMenus.swift in Sources */,
+				10534A1F1FD732E000D9CFEA /* PersonNumberTableViewCell.swift in Sources */,
+				10534A211FD73D4500D9CFEA /* TagTableViewController.swift in Sources */,
 				1096B9A01FCE01170005A202 /* FillMyFridge.xcdatamodeld in Sources */,
 				1096B99A1FCE01170005A202 /* ViewController.swift in Sources */,
 				1096B9981FCE01170005A202 /* AppDelegate.swift in Sources */,

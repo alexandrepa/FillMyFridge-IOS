@@ -10,10 +10,33 @@ import UIKit
 
 class PersonNumberTableViewController: UITableViewController {
     var listeMenus : ListeMenus!
+    var menu : Menu!
+    var nbRow : Int = 1
+    var lastOne : Bool = false
 
+    @IBAction func ValueChangedSlider(_ sender: UISlider) {
+        sender.setValue(sender.value.rounded(.down), animated: true)
+        let cell = sender.superview?.superview as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)
+        menu.repas[indexPath![1]].numberOfPersonnes = Int(sender.value)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         print("ListeMenu:"+String(listeMenus.menus[1].repas.count))
+        var indexMenu:Int = 0
+        while listeMenus.menus.count>indexMenu && listeMenus.menus[indexMenu].repas[0].numberOfPersonnes != 0 {
+            indexMenu = indexMenu + 1
+        }
+        if(indexMenu == listeMenus.menus.count){
+            performSegue(withIdentifier: "TagSegue", sender: self)
+            lastOne = true
+        }
+        else{
+           menu = listeMenus.menus[indexMenu]
+            nbRow = menu.repas.count
+            
+        }
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -31,23 +54,38 @@ class PersonNumberTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return nbRow
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonNumberTableViewCell", for: indexPath) as? PersonNumberTableViewCell
+        if(!lastOne){
+            let repas : Repas = menu.repas[indexPath.row]
+            // Configure the cell...
+            cell?.labelName.text = repas.nom
+        }
+        
+        
+        return cell!
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "PersonNumberAgainSegue"){
+            let destinationVC = segue.destination as! PersonNumberTableViewController
+            destinationVC.listeMenus = listeMenus
+        }
+        else {
+            let destinationVC = segue.destination as! TagTableViewController
+            destinationVC.listeMenus = listeMenus
+        }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

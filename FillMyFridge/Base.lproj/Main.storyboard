@@ -114,14 +114,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Acz-Kt-kSO">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <segue destination="exW-Rx-kBv" kind="show" identifier="PersonNumberAgainSegue" id="xi8-CO-3Qf"/>
+                            </connections>
+                        </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="H7Z-Zu-wyJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PersonNumberTableViewCell" id="H7Z-Zu-wyJ" customClass="PersonNumberTableViewCell" customModule="FillMyFridge" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H7Z-Zu-wyJ" id="g50-cs-Om7">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C06-Eo-nkw">
+                                            <rect key="frame" x="26" y="11" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Mpc-gN-pZx">
+                                            <rect key="frame" x="101" y="7" width="260" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="ValueChangedSlider:" destination="exW-Rx-kBv" eventType="valueChanged" id="pfF-Yk-A5E"/>
+                                            </connections>
+                                        </slider>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelName" destination="C06-Eo-nkw" id="U0T-ZO-vax"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -129,10 +156,41 @@
                             <outlet property="delegate" destination="exW-Rx-kBv" id="C76-pr-sCy"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="QWe-g9-c5e" kind="show" identifier="TagSegue" id="IB0-NW-WJg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kpp-IP-Gfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1151" y="914"/>
+            <point key="canvasLocation" x="1149.5999999999999" y="913.49325337331345"/>
+        </scene>
+        <!--Tag-->
+        <scene sceneID="UIa-ti-Wy8">
+            <objects>
+                <tableViewController title="Tag" id="QWe-g9-c5e" customClass="TagTableViewController" customModule="FillMyFridge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XYA-8H-PNI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="GSE-GO-HLL">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GSE-GO-HLL" id="IdP-9N-8wY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QWe-g9-c5e" id="eOz-h6-5Ny"/>
+                            <outlet property="delegate" destination="QWe-g9-c5e" id="zYf-Dv-yhm"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mi6-Kw-TFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="1649"/>
         </scene>
         <!--MealNumber-->
         <scene sceneID="uKw-jo-3If">
@@ -148,7 +206,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="29"/>
                             <state key="normal" title="Continuer"/>
                             <connections>
-                                <segue destination="exW-Rx-kBv" kind="show" id="kbf-ax-GgS"/>
+                                <segue destination="exW-Rx-kBv" kind="show" identifier="" id="kbf-ax-GgS"/>
                             </connections>
                         </button>
                         <prototypes>
@@ -170,10 +228,9 @@
                                             <rect key="frame" x="85" y="6" width="250" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <connections>
-                                                <action selector="CHanged:" destination="QEj-em-IJo" eventType="editingChanged" id="ZIC-fd-w0N"/>
-                                                <action selector="TouchDrag:" destination="QEj-em-IJo" eventType="touchDragExit" id="0XO-mh-auv"/>
-                                                <action selector="TouchDragOutside:" destination="QEj-em-IJo" eventType="touchDragOutside" id="cSk-iv-sSr"/>
-                                                <action selector="TouchUpOutside:" destination="QEj-em-IJo" eventType="touchUpOutside" id="S8n-oX-XWT"/>
+                                                <action selector="TouchDragExistSlider:" destination="0O0-cc-dfb" eventType="touchDragExit" id="5KT-rj-9kv"/>
+                                                <action selector="TouchUpOutside:" destination="0O0-cc-dfb" eventType="touchUpOutside" id="uJt-LT-5T5"/>
+                                                <action selector="ValueChangedSlider:" destination="0O0-cc-dfb" eventType="valueChanged" id="uu5-OI-Nms"/>
                                             </connections>
                                         </slider>
                                     </subviews>
@@ -209,6 +266,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dpd-ut-hVH"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aoe-Op-No5" userLabel="First Responder" sceneMemberID="firstResponder"/>
