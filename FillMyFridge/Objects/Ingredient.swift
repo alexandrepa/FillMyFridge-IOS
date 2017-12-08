@@ -8,7 +8,14 @@
 
 import Foundation
 
-class Ingredient {
+class Ingredient : CustomStringConvertible {
+    var description: String {
+        var description = ""
+        description += "id: \(self.id)\n"
+        description += "nom: \(self.nom)\n"
+        description += "grammes: \(self.grammes)\n"
+        return description
+    }
     var id:Int
     var nom:String
     var grammes:Int

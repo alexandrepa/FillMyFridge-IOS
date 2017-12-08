@@ -8,7 +8,17 @@
 
 import Foundation
 
-class Repas {
+class Repas : CustomStringConvertible {
+    var description: String {
+        var description = ""
+        description += "id: \(self.id)\n"
+        description += "nom: \(self.nom)\n"
+        description += "numberOfPersonnes: \(self.numberOfPersonnes)\n"
+        description += "numero: \(self.numero)\n"
+        description += "plats: \(self.plats)\n"
+        return description
+    }
+    
     var id:Int = 0
     var nom:String
     var plats:Array<Plat> = Array()

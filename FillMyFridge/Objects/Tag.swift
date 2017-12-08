@@ -8,7 +8,13 @@
 
 import Foundation
 
-class Tag {
+class Tag : CustomStringConvertible {
+    var description: String {
+        var description = ""
+        description += "id: \(self.id)\n"
+        description += "label: \(self.label)\n"
+        return description
+    }
     var id:Int
     var label:String
     

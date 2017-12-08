@@ -8,7 +8,15 @@
 
 import Foundation
 
-class Plat {
+class Plat : CustomStringConvertible {
+    var description: String {
+        var description = ""
+        description += "id: \(self.id)\n"
+        description += "intitule: \(self.intitule)\n"
+        description += "ingredients: \(self.ingredients)\n"
+        description += "tags: \(self.tags)\n"
+        return description
+    }
     var id:Int
     var intitule:String
     var ingredients: Array<Ingredient> = Array()

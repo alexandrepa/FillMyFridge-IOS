@@ -8,7 +8,16 @@
 
 import Foundation
 
-class Menu {
+class Menu : CustomStringConvertible {
+    var description: String {
+        var description = ""
+        description += "id: \(self.id)\n"
+        description += "nom: \(self.nom)\n"
+        description += "date: \(self.date)\n"
+        description += "repas: \(self.repas)\n"
+        return description
+    }
+    
     var id: Int = 0
     var nom: String
     var date: Date

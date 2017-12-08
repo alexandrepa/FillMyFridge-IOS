@@ -8,7 +8,16 @@
 
 import Foundation
 
-class ListeMenus  {
+class ListeMenus : CustomStringConvertible {
+    var description: String {
+       var description = ""
+        description += "id: \(self.id)\n"
+        description += "dateDebut: \(self.dateDebut)\n"
+        description += "dateFin: \(self.dateFin)\n"
+        description += "menus: \(self.menus)\n"
+        return description
+    }
+    
     var id : Int = 0
     var dateDebut : Date
     var dateFin : Date
