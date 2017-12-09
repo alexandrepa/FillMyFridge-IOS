@@ -445,7 +445,7 @@ class MySQLiteHelper {
             
             //SALADE DE POMME DE TERRE EPICEE
             try db.execute("INSERT INTO `Plat_Ingredient`(`plat`,`ingredient`,`grammes`) VALUES (12,66,130);")
-            try db.execute("INSERT INTO `Plat_Ingredient`(`plat`,`ingredient`,`grammes`) VALUES (12,23,7.5);")
+            try db.execute("INSERT INTO `Plat_Ingredient`(`plat`,`ingredient`,`grammes`) VALUES (12,23,7);")
             try db.execute("INSERT INTO `Plat_Ingredient`(`plat`,`ingredient`,`grammes`) VALUES (12,59,60);")
             try db.execute("INSERT INTO `Plat_Ingredient`(`plat`,`ingredient`,`grammes`) VALUES (12,51,-1);")
             try db.execute("INSERT INTO `Plat_Ingredient`(`plat`,`ingredient`,`grammes`) VALUES (12,67,-1);")

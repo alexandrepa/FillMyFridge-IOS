@@ -24,8 +24,9 @@ class ViewController: UIViewController {
         let platDAO = PlatDAO(1)
         /*let plat = Plat(1, "", [Ingredient](), [Tag]())
         platDAO.addPlat(plat)*/
-        
-        platDAO.getPlats()
+        var tags = [Tag]()
+        tags.append(Tag(1, ""))
+        print(String(describing: platDAO.findPlatByTag(tags)))
         
         // Do any additional setup after loading the view, typically from a nib.
     }
