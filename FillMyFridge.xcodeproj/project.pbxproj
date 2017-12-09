@@ -13,6 +13,7 @@
 		106BEE271FDB1AA800085055 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106BEE191FDB1A1D00085055 /* SQLite.framework */; };
 		106BEE281FDB1B0700085055 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106BEE191FDB1A1D00085055 /* SQLite.framework */; };
 		106BEE291FDB1B0700085055 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 106BEE191FDB1A1D00085055 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		106BEE2E1FDB637E00085055 /* PlatDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106BEE2D1FDB637E00085055 /* PlatDAO.swift */; };
 		107A13351FCE144900436568 /* ListeMenus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A13341FCE144900436568 /* ListeMenus.swift */; };
 		107A13391FCE186C00436568 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A13381FCE186C00436568 /* Menu.swift */; };
 		107A133B1FCE19DD00436568 /* Repas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A133A1FCE19DD00436568 /* Repas.swift */; };
@@ -111,6 +112,7 @@
 		10534A201FD73D4500D9CFEA /* TagTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TagTableViewController.swift; path = Controllers/TagTableViewController.swift; sourceTree = "<group>"; };
 		106BEE0C1FDB187800085055 /* MySQLiteHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MySQLiteHelper.swift; path = DAO/MySQLiteHelper.swift; sourceTree = "<group>"; };
 		106BEE0E1FDB1A1C00085055 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		106BEE2D1FDB637E00085055 /* PlatDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlatDAO.swift; path = DAO/PlatDAO.swift; sourceTree = "<group>"; };
 		107A13341FCE144900436568 /* ListeMenus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListeMenus.swift; path = Objects/ListeMenus.swift; sourceTree = "<group>"; };
 		107A13381FCE186C00436568 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Menu.swift; path = Objects/Menu.swift; sourceTree = "<group>"; };
 		107A133A1FCE19DD00436568 /* Repas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Repas.swift; path = Objects/Repas.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				10D22CC11FD99CF900232289 /* TagTableViewCell.swift */,
 				10FBE0281FDB01B60040031E /* GenerationDoneViewController.swift */,
 				106BEE0C1FDB187800085055 /* MySQLiteHelper.swift */,
+				106BEE2D1FDB637E00085055 /* PlatDAO.swift */,
 			);
 			path = FillMyFridge;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				107A133D1FCE1AEF00436568 /* Plat.swift in Sources */,
 				107A13471FCE20EF00436568 /* DatePickViewController.swift in Sources */,
 				107A133B1FCE19DD00436568 /* Repas.swift in Sources */,
+				106BEE2E1FDB637E00085055 /* PlatDAO.swift in Sources */,
 				10FBE0291FDB01B70040031E /* GenerationDoneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

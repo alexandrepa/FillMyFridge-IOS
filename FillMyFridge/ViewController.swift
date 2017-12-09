@@ -12,6 +12,21 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let SQLHelper = MySQLiteHelper()
+        
+        let fileManager = FileManager.default
+        let path = SQLHelper.getPathString()
+        
+        if !fileManager.fileExists(atPath: path){
+            SQLHelper.connect()
+            SQLHelper.createDatabases()
+        }
+        let platDAO = PlatDAO(1)
+        /*let plat = Plat(1, "", [Ingredient](), [Tag]())
+        platDAO.addPlat(plat)*/
+        
+        platDAO.getPlats()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
