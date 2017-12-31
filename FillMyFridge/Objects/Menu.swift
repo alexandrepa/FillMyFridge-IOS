@@ -23,14 +23,14 @@ class Menu : CustomStringConvertible {
     var date: Date
     var repas : Array<Repas> = Array()
     
-    init(_ id:Int, _ nom:String, _ date:Date, repas:Array<Repas>) {
+    init(_ id:Int, _ nom:String, _ date:Date, _ repas:Array<Repas>) {
         self.id = id
         self.nom = nom
         self.date = date
         self.repas = repas
     }
     
-    init(_ nom:String, _ date:Date, repas:Array<Repas>) {
+    init(_ nom:String, _ date:Date, _ repas:Array<Repas>) {
         self.nom = nom
         self.date = date
         self.repas = repas

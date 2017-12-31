@@ -9,7 +9,7 @@
 import UIKit
 
 class TagTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource {
-    let colors = ["Gourmand","Healthy","Green","Blue"]
+    let colors = ["Gourmand","Elaboré","Végétarien","Salades","Familial","Gratin","Healthy","Exotique","Variante"]
     var repas : Repas!
     @IBOutlet weak var pickerView: UIPickerView!
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -27,9 +27,12 @@ class TagTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataS
     {
         var tags = [Tag]()
         tags.append(Tag(row+1, colors[row]))
-        var plats = [Plat]()
-        plats.append(Plat(0, "Plat", [Ingredient](), tags))
-        repas.plats = plats
+        let platDAO = PlatDAO(1)
+        let plats = platDAO.findPlatByTag(tags)
+        let randomIndex = Int(arc4random_uniform(UInt32(plats.count)))
+        var selectedPlat = [Plat]()
+        selectedPlat.append(plats[randomIndex])
+        repas.plats = selectedPlat
         repas.id = 1
     }
     

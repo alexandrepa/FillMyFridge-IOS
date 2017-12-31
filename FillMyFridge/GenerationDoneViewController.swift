@@ -13,6 +13,8 @@ class GenerationDoneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("generate :"+String(describing: listeMenus))
+        let listeMenusDAO = ListeMenusDAO()
+        listeMenusDAO.createListeMenus(listeMenus)
 
         // Do any additional setup after loading the view.
     }
