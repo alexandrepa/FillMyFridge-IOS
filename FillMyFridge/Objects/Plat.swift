@@ -28,4 +28,6 @@ class Plat : CustomStringConvertible {
         self.ingredients = ingredients
         self.tags = tags
     }
+    
+    
 }

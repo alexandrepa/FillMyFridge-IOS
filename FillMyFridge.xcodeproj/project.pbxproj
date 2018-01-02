@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D3F08141FFC02880025DAFD /* RepasDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3F08131FFC02880025DAFD /* RepasDetailsTableViewController.swift */; };
+		0D3F08231FFC0D340025DAFD /* RepasDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3F08221FFC0D340025DAFD /* RepasDetailsTableViewCell.swift */; };
 		0D62C67E1FF42231002E3B5D /* RepasDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62C67D1FF42231002E3B5D /* RepasDAO.swift */; };
 		0D62C6801FF518CA002E3B5D /* MenuDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62C67F1FF518CA002E3B5D /* MenuDAO.swift */; };
 		0D62C6821FF5288D002E3B5D /* ListeMenusDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62C6811FF5288D002E3B5D /* ListeMenusDAO.swift */; };
+		0DB2663D1FFC1E5A009FC6FA /* ItemListeDeCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB2663C1FFC1E5A009FC6FA /* ItemListeDeCourse.swift */; };
+		0DB2664C1FFC20FC009FC6FA /* ListeDeCourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB2664B1FFC20FC009FC6FA /* ListeDeCourseTableViewController.swift */; };
+		0DB2664E1FFC2113009FC6FA /* ListeDeCourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB2664D1FFC2113009FC6FA /* ListeDeCourseTableViewCell.swift */; };
 		0DB694E61FFBDC280008A219 /* AllListeMenusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB694E51FFBDC280008A219 /* AllListeMenusTableViewController.swift */; };
 		0DB694F51FFBDC490008A219 /* AllListeMenusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB694F41FFBDC490008A219 /* AllListeMenusTableViewCell.swift */; };
 		0DB694F71FFBEA480008A219 /* ListeMenusDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB694F61FFBEA480008A219 /* ListeMenusDetailsViewController.swift */; };
@@ -163,10 +168,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D3F08131FFC02880025DAFD /* RepasDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepasDetailsTableViewController.swift; path = Controllers/RepasDetailsTableViewController.swift; sourceTree = "<group>"; };
+		0D3F08221FFC0D340025DAFD /* RepasDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepasDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		0D62C65F1FF40DBC002E3B5D /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		0D62C67D1FF42231002E3B5D /* RepasDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepasDAO.swift; path = DAO/RepasDAO.swift; sourceTree = "<group>"; };
 		0D62C67F1FF518CA002E3B5D /* MenuDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuDAO.swift; path = DAO/MenuDAO.swift; sourceTree = "<group>"; };
 		0D62C6811FF5288D002E3B5D /* ListeMenusDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListeMenusDAO.swift; path = DAO/ListeMenusDAO.swift; sourceTree = "<group>"; };
+		0DB2663C1FFC1E5A009FC6FA /* ItemListeDeCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListeDeCourse.swift; sourceTree = "<group>"; };
+		0DB2664B1FFC20FC009FC6FA /* ListeDeCourseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListeDeCourseTableViewController.swift; path = Controllers/ListeDeCourseTableViewController.swift; sourceTree = "<group>"; };
+		0DB2664D1FFC2113009FC6FA /* ListeDeCourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeDeCourseTableViewCell.swift; sourceTree = "<group>"; };
 		0DB694E51FFBDC280008A219 /* AllListeMenusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AllListeMenusTableViewController.swift; path = Controllers/AllListeMenusTableViewController.swift; sourceTree = "<group>"; };
 		0DB694F41FFBDC490008A219 /* AllListeMenusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListeMenusTableViewCell.swift; sourceTree = "<group>"; };
 		0DB694F61FFBEA480008A219 /* ListeMenusDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListeMenusDetailsViewController.swift; path = Controllers/ListeMenusDetailsViewController.swift; sourceTree = "<group>"; };
@@ -297,6 +307,11 @@
 				0DB694F41FFBDC490008A219 /* AllListeMenusTableViewCell.swift */,
 				0DB694F61FFBEA480008A219 /* ListeMenusDetailsViewController.swift */,
 				0DB694F81FFBF9A10008A219 /* ListeMenusDetailsTableViewCell.swift */,
+				0D3F08131FFC02880025DAFD /* RepasDetailsTableViewController.swift */,
+				0D3F08221FFC0D340025DAFD /* RepasDetailsTableViewCell.swift */,
+				0DB2663C1FFC1E5A009FC6FA /* ItemListeDeCourse.swift */,
+				0DB2664B1FFC20FC009FC6FA /* ListeDeCourseTableViewController.swift */,
+				0DB2664D1FFC2113009FC6FA /* ListeDeCourseTableViewCell.swift */,
 			);
 			path = FillMyFridge;
 			sourceTree = "<group>";
@@ -486,6 +501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3F08141FFC02880025DAFD /* RepasDetailsTableViewController.swift in Sources */,
 				0DB694E61FFBDC280008A219 /* AllListeMenusTableViewController.swift in Sources */,
 				10D22CC21FD99CF900232289 /* TagTableViewCell.swift in Sources */,
 				107A13351FCE144900436568 /* ListeMenus.swift in Sources */,
@@ -498,11 +514,15 @@
 				1096B9981FCE01170005A202 /* AppDelegate.swift in Sources */,
 				10928CD41FCF6E1700F33600 /* PersonNumberTableViewController.swift in Sources */,
 				0D62C67E1FF42231002E3B5D /* RepasDAO.swift in Sources */,
+				0DB2664C1FFC20FC009FC6FA /* ListeDeCourseTableViewController.swift in Sources */,
 				107A13411FCE1BB800436568 /* Ingredient.swift in Sources */,
 				0D62C6821FF5288D002E3B5D /* ListeMenusDAO.swift in Sources */,
 				107A13391FCE186C00436568 /* Menu.swift in Sources */,
 				107A13431FCE1C5B00436568 /* Tag.swift in Sources */,
 				107A13451FCE204000436568 /* MealNumberTableViewController.swift in Sources */,
+				0DB2664E1FFC2113009FC6FA /* ListeDeCourseTableViewCell.swift in Sources */,
+				0D3F08231FFC0D340025DAFD /* RepasDetailsTableViewCell.swift in Sources */,
+				0DB2663D1FFC1E5A009FC6FA /* ItemListeDeCourse.swift in Sources */,
 				10928CD21FCF5E2E00F33600 /* MealTableViewCell.swift in Sources */,
 				106BEE0D1FDB187800085055 /* MySQLiteHelper.swift in Sources */,
 				0DB694F71FFBEA480008A219 /* ListeMenusDetailsViewController.swift in Sources */,

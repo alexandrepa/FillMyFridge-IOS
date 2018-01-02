@@ -32,7 +32,7 @@ class ListeMenusDetailsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return listeMenus.menus[section].description
+        return "Le "+listeMenus.getStringDate(listeMenus.menus[section].date)+" :"
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,14 +45,20 @@ class ListeMenusDetailsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListeMenusDetailsTableViewCell", for: indexPath) as? ListeMenusDetailsTableViewCell
         let repas = listeMenus.menus[indexPath.section].repas[indexPath.row]
         
-        cell?.label.text = repas.description
+        cell?.label.text = "Repas n°"+String(repas.numero)
         cell?.repas = repas
         return cell!
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! ListeMenusDetailsViewController
-        //destinationVC.listeMenus = listeMenus[(tableView.indexPathForSelectedRow?.row)!]
+        if(segue.identifier == "RepasDetailsShow"){
+            let destinationVC = segue.destination as! RepasDetailsTableViewController
+            destinationVC.repas = listeMenus.menus[(tableView.indexPathForSelectedRow?.section)!].repas[(tableView.indexPathForSelectedRow?.row)!]
+        }
+        else {
+            let destinationVC = segue.destination as! ListeDeCourseTableViewController
+            destinationVC.listeMenus = listeMenus
+        }
     }
     
 

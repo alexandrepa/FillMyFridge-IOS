@@ -50,6 +50,25 @@ class ListeMenus : CustomStringConvertible {
         return resultString
     }
     
+    func getIngredients () -> [Int: ItemListeDeCourse]{
+        var ingredients = [Int: ItemListeDeCourse]()
+        
+        for menu in self.menus {
+            for repas in menu.repas {
+                for ingredient in repas.plats[0].ingredients {
+                    if(ingredients[ingredient.id] == nil){
+                        ingredients[ingredient.id] = ItemListeDeCourse(ingredient.grammes, ingredient.nom)
+                    }
+                    else {
+                        ingredients[ingredient.id] = ItemListeDeCourse((ingredients[ingredient.id]?.grammes)! + ingredient.grammes, ingredient.nom)
+                    }
+                }
+            }
+        }
+        
+        return ingredients
+    }
+    
     
 }
 

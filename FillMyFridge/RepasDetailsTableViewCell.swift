@@ -1,5 +1,5 @@
 //
-//  ListeMenusDetailsTableViewCell.swift
+//  RepasDetailsTableViewCell.swift
 //  FillMyFridge
 //
 //  Created by Gerald Patelli on 02/01/2018.
@@ -8,18 +8,18 @@
 
 import UIKit
 
-class ListeMenusDetailsTableViewCell: UITableViewCell {
-    var repas : Repas!
+class RepasDetailsTableViewCell: UITableViewCell {
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    @IBOutlet weak var label: UILabel!
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
-
+    @IBOutlet weak var label: UILabel!
+    
 }

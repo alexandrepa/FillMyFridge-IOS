@@ -1,5 +1,5 @@
 //
-//  ListeMenusDetailsTableViewCell.swift
+//  ListeDeCourseTableViewCell.swift
 //  FillMyFridge
 //
 //  Created by Gerald Patelli on 02/01/2018.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ListeMenusDetailsTableViewCell: UITableViewCell {
-    var repas : Repas!
+class ListeDeCourseTableViewCell: UITableViewCell {
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
