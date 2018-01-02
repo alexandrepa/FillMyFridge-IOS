@@ -36,7 +36,10 @@ class MealNumberTableViewController: UITableViewController {
         
         for index in 0...nbRow-1 {
             let date:Date = Calendar.current.date(byAdding: .day, value: index, to: dateDebut)!
-            menus.append(Menu(listeMenus.getStringDate(date), date))
+            var arrayRepas = [Repas]()
+            arrayRepas.append(Repas("Repas n°1", 0, 1))
+            let menu = Menu(listeMenus.getStringDate(date), date, arrayRepas)
+            menus.append(menu)
         }
         listeMenus.menus = menus
 

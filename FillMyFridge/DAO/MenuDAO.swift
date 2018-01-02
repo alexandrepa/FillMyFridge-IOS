@@ -15,7 +15,7 @@ class MenuDAO {
     let table = Table("Menu")
     let tableAssociation = Table("ListeMenus_Menu")
     let nom = Expression<String>("nom")
-    let date = Expression<Double>("date")
+    let date = Expression<Int64>("date")
     let menuSql = Expression<Int64>("menu")
     let listemenusSql = Expression<Int64>("listemenus")
     
@@ -25,7 +25,7 @@ class MenuDAO {
     }
     func createMenu(_ menu : Menu){
         do {
-            let id = try database.run(table.insert(nom <- menu.nom, date <- menu.date.timeIntervalSince1970))
+            let id = try database.run(table.insert(nom <- menu.nom, date <- Int64(menu.date.timeIntervalSince1970)))
             let repasDAO = RepasDAO(Int(id))
             for repas in menu.repas{
                 repasDAO.createRepas(repas)
@@ -49,7 +49,7 @@ class MenuDAO {
         var menus = [Menu]()
         do {
             for menuCursor in try database.prepare("SELECT m.id, m.nom, m.date from Menu as m, ListeMenus_Menu as lm WHERE lm.listemenus = "+String(self.listMenuID)+" AND m.id = lm.menu") {
-                let menu = Menu(Int(menuCursor[0] as! Int64), menuCursor[1] as! String, Date(timeIntervalSince1970: menuCursor[2] as! Double), [Repas]())
+                let menu = Menu(Int(menuCursor[0] as! Int64), menuCursor[1] as! String, Date(timeIntervalSince1970: Double(menuCursor[2] as! Int64)), [Repas]())
                 
                 let repasDAO = RepasDAO(Int(menu.id))
                 menu.repas = repasDAO.getRepas()

@@ -11,8 +11,8 @@ import SQLite
 
 class ListeMenusDAO {
     var database : Connection!
-    let dateDebut = Expression<Double>("date_debut")
-    let dateFin = Expression<Double>("date_fin")
+    let dateDebut = Expression<Int64>("date_debut")
+    let dateFin = Expression<Int64>("date_fin")
     let table = Table("ListeMenus")
 
     init() {
@@ -20,7 +20,7 @@ class ListeMenusDAO {
     }
     func createListeMenus(_ listeMenus : ListeMenus) -> ListeMenus{
         do {
-            let id = try database.run(table.insert(dateDebut <- listeMenus.dateDebut.timeIntervalSince1970, dateFin <- listeMenus.dateFin.timeIntervalSince1970))
+            let id = try database.run(table.insert(dateDebut <- Int64(listeMenus.dateDebut.timeIntervalSince1970), dateFin <- Int64(listeMenus.dateFin.timeIntervalSince1970)))
             let menuDAO = MenuDAO(Int(id))
             for menu in listeMenus.menus{
                 menuDAO.createMenu(menu)
@@ -33,10 +33,10 @@ class ListeMenusDAO {
     
     func cursorToListeMenus (_ cursor : Array<Any>) -> ListeMenus {
         let id = Int(cursor[0] as! Int64)
-        let debut = cursor[1] as! Double
-        let fin = cursor[2] as! Double
+        let debut = cursor[1] as! Int64
+        let fin = cursor[2] as! Int64
         
-        let listeMenus = ListeMenus(id, Date(timeIntervalSince1970:debut), Date(timeIntervalSince1970:fin), [Menu]())
+        let listeMenus = ListeMenus(id, Date(timeIntervalSince1970:Double(debut)), Date(timeIntervalSince1970:Double(fin)), [Menu]())
 
         return listeMenus
     }
@@ -56,7 +56,7 @@ class ListeMenusDAO {
         return listeMenus
     }
     
-    func getAllListeMenus(_ id: Int) -> Array<ListeMenus>{
+    func getAllListeMenus() -> Array<ListeMenus>{
         var arrayListeMenus = [ListeMenus]()
         do {
             for listeMenusCursor in try database.prepare("SELECT * from ListeMenus;") {

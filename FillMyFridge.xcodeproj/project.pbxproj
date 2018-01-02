@@ -10,6 +10,10 @@
 		0D62C67E1FF42231002E3B5D /* RepasDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62C67D1FF42231002E3B5D /* RepasDAO.swift */; };
 		0D62C6801FF518CA002E3B5D /* MenuDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62C67F1FF518CA002E3B5D /* MenuDAO.swift */; };
 		0D62C6821FF5288D002E3B5D /* ListeMenusDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62C6811FF5288D002E3B5D /* ListeMenusDAO.swift */; };
+		0DB694E61FFBDC280008A219 /* AllListeMenusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB694E51FFBDC280008A219 /* AllListeMenusTableViewController.swift */; };
+		0DB694F51FFBDC490008A219 /* AllListeMenusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB694F41FFBDC490008A219 /* AllListeMenusTableViewCell.swift */; };
+		0DB694F71FFBEA480008A219 /* ListeMenusDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB694F61FFBEA480008A219 /* ListeMenusDetailsViewController.swift */; };
+		0DB694F91FFBF9A10008A219 /* ListeMenusDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB694F81FFBF9A10008A219 /* ListeMenusDetailsTableViewCell.swift */; };
 		10534A1F1FD732E000D9CFEA /* PersonNumberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10534A1E1FD732E000D9CFEA /* PersonNumberTableViewCell.swift */; };
 		10534A211FD73D4500D9CFEA /* TagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10534A201FD73D4500D9CFEA /* TagTableViewController.swift */; };
 		106BEE0D1FDB187800085055 /* MySQLiteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106BEE0C1FDB187800085055 /* MySQLiteHelper.swift */; };
@@ -163,6 +167,10 @@
 		0D62C67D1FF42231002E3B5D /* RepasDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepasDAO.swift; path = DAO/RepasDAO.swift; sourceTree = "<group>"; };
 		0D62C67F1FF518CA002E3B5D /* MenuDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuDAO.swift; path = DAO/MenuDAO.swift; sourceTree = "<group>"; };
 		0D62C6811FF5288D002E3B5D /* ListeMenusDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListeMenusDAO.swift; path = DAO/ListeMenusDAO.swift; sourceTree = "<group>"; };
+		0DB694E51FFBDC280008A219 /* AllListeMenusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AllListeMenusTableViewController.swift; path = Controllers/AllListeMenusTableViewController.swift; sourceTree = "<group>"; };
+		0DB694F41FFBDC490008A219 /* AllListeMenusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListeMenusTableViewCell.swift; sourceTree = "<group>"; };
+		0DB694F61FFBEA480008A219 /* ListeMenusDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListeMenusDetailsViewController.swift; path = Controllers/ListeMenusDetailsViewController.swift; sourceTree = "<group>"; };
+		0DB694F81FFBF9A10008A219 /* ListeMenusDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeMenusDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		10534A1E1FD732E000D9CFEA /* PersonNumberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonNumberTableViewCell.swift; sourceTree = "<group>"; };
 		10534A201FD73D4500D9CFEA /* TagTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TagTableViewController.swift; path = Controllers/TagTableViewController.swift; sourceTree = "<group>"; };
 		106BEE0C1FDB187800085055 /* MySQLiteHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MySQLiteHelper.swift; path = DAO/MySQLiteHelper.swift; sourceTree = "<group>"; };
@@ -285,6 +293,10 @@
 				0D62C67D1FF42231002E3B5D /* RepasDAO.swift */,
 				0D62C67F1FF518CA002E3B5D /* MenuDAO.swift */,
 				0D62C6811FF5288D002E3B5D /* ListeMenusDAO.swift */,
+				0DB694E51FFBDC280008A219 /* AllListeMenusTableViewController.swift */,
+				0DB694F41FFBDC490008A219 /* AllListeMenusTableViewCell.swift */,
+				0DB694F61FFBEA480008A219 /* ListeMenusDetailsViewController.swift */,
+				0DB694F81FFBF9A10008A219 /* ListeMenusDetailsTableViewCell.swift */,
 			);
 			path = FillMyFridge;
 			sourceTree = "<group>";
@@ -474,6 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DB694E61FFBDC280008A219 /* AllListeMenusTableViewController.swift in Sources */,
 				10D22CC21FD99CF900232289 /* TagTableViewCell.swift in Sources */,
 				107A13351FCE144900436568 /* ListeMenus.swift in Sources */,
 				10534A1F1FD732E000D9CFEA /* PersonNumberTableViewCell.swift in Sources */,
@@ -481,6 +494,7 @@
 				1096B9A01FCE01170005A202 /* FillMyFridge.xcdatamodeld in Sources */,
 				1096B99A1FCE01170005A202 /* ViewController.swift in Sources */,
 				0D62C6801FF518CA002E3B5D /* MenuDAO.swift in Sources */,
+				0DB694F51FFBDC490008A219 /* AllListeMenusTableViewCell.swift in Sources */,
 				1096B9981FCE01170005A202 /* AppDelegate.swift in Sources */,
 				10928CD41FCF6E1700F33600 /* PersonNumberTableViewController.swift in Sources */,
 				0D62C67E1FF42231002E3B5D /* RepasDAO.swift in Sources */,
@@ -491,7 +505,9 @@
 				107A13451FCE204000436568 /* MealNumberTableViewController.swift in Sources */,
 				10928CD21FCF5E2E00F33600 /* MealTableViewCell.swift in Sources */,
 				106BEE0D1FDB187800085055 /* MySQLiteHelper.swift in Sources */,
+				0DB694F71FFBEA480008A219 /* ListeMenusDetailsViewController.swift in Sources */,
 				107A133D1FCE1AEF00436568 /* Plat.swift in Sources */,
+				0DB694F91FFBF9A10008A219 /* ListeMenusDetailsTableViewCell.swift in Sources */,
 				107A13471FCE20EF00436568 /* DatePickViewController.swift in Sources */,
 				107A133B1FCE19DD00436568 /* Repas.swift in Sources */,
 				106BEE2E1FDB637E00085055 /* PlatDAO.swift in Sources */,

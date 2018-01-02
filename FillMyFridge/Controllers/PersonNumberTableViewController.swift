@@ -22,7 +22,7 @@ class PersonNumberTableViewController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ListeMenu:"+String(listeMenus.menus[1].repas.count))
+        //print("ListeMenu:"+String(listeMenus.menus[1].repas.count))
         var indexMenu:Int = 0
         while listeMenus.menus.count>indexMenu && listeMenus.menus[indexMenu].repas[0].numberOfPersonnes != 0 {
             indexMenu = indexMenu + 1
@@ -33,6 +33,9 @@ class PersonNumberTableViewController: UITableViewController {
         }
         else{
            menu = listeMenus.menus[indexMenu]
+            for repas in menu.repas {
+                repas.numberOfPersonnes = 1
+            }
             nbRow = menu.repas.count
             
         }

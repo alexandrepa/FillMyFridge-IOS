@@ -1,49 +1,23 @@
 //
-//  TagTableViewController.swift
+//  AllListeMenusTableViewController.swift
 //  FillMyFridge
 //
-//  Created by alexandre patelli on 05/12/2017.
-//  Copyright © 2017 alexandre patelli. All rights reserved.
+//  Created by Gerald Patelli on 02/01/2018.
+//  Copyright © 2018 alexandre patelli. All rights reserved.
 //
 
 import UIKit
 
-class TagTableViewController: UITableViewController {
-    var listeMenus : ListeMenus!
-    var menu : Menu!
+class AllListeMenusTableViewController: UITableViewController {
+    var listeMenus = [ListeMenus]()
     var nbRow : Int = 1
-    var lastOne : Bool = false
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        let listeMenusDAO = ListeMenusDAO()
+        listeMenus = listeMenusDAO.getAllListeMenus()
+        nbRow = listeMenus.count
         
-        var indexMenu:Int = 0
-        while listeMenus.menus.count>indexMenu && listeMenus.menus[indexMenu].repas[0].id != 0 {
-            indexMenu = indexMenu + 1
-        }
-        if(indexMenu == listeMenus.menus.count){
-            performSegue(withIdentifier: "generationDoneSegue", sender: self)
-            lastOne = true
-        }
-        else{
-            menu = listeMenus.menus[indexMenu]
-            for repas in menu.repas {
-                var tags = [Tag]()
-                tags.append(Tag(1, "Gourmand"))
-                let platDAO = PlatDAO(1)
-                let plats = platDAO.findPlatByTag(tags)
-                let randomIndex = Int(arc4random_uniform(UInt32(plats.count)))
-                var selectedPlat = [Plat]()
-                selectedPlat.append(plats[randomIndex])
-                repas.plats = selectedPlat
-                repas.id = 1
-            }
-            
-            nbRow = menu.repas.count
-            
-        }
-        
-        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -70,29 +44,19 @@ class TagTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TagTableViewCell", for: indexPath) as? TagTableViewCell
-        if(!lastOne){
-            let repas : Repas = menu.repas[indexPath.row]
-            // Configure the cell...
-            cell?.dateLabel.text = repas.nom
-            cell?.repas = repas
-        }
-        
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AllListeMenusTableViewCell", for: indexPath) as? AllListeMenusTableViewCell
+        let listeMenu = listeMenus[indexPath.row]
+
+        cell?.label.text = "Menu du "+listeMenu.getStringDate(listeMenu.dateDebut)+" au "+listeMenu.getStringDate(listeMenu.dateFin)
+
         return cell!
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "TagAgainSegue"){
-            let destinationVC = segue.destination as! TagTableViewController
-            destinationVC.listeMenus = listeMenus
-        }
-        else {
-            let destinationVC = segue.destination as! GenerationDoneViewController
-            destinationVC.listeMenus = listeMenus
-        }
+            let destinationVC = segue.destination as! ListeMenusDetailsViewController
+        destinationVC.listeMenus = listeMenus[(tableView.indexPathForSelectedRow?.row)!]
     }
- 
+    
 
     /*
     // Override to support conditional editing of the table view.
