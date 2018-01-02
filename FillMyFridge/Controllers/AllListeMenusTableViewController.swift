@@ -24,6 +24,14 @@ class AllListeMenusTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let listeMenusDAO = ListeMenusDAO()
+        listeMenus = listeMenusDAO.getAllListeMenus()
+        nbRow = listeMenus.count
+        tableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

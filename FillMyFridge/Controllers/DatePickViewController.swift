@@ -8,19 +8,23 @@
 
 import UIKit
 
-class DatePickViewController: UIViewController {
+class DatePickViewController: UIViewController, UITabBarControllerDelegate {
     var dateDebut : Date = Date()
     var dateFin : Date = Date()
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBarController?.delegate = self
         // Do any additional setup after loading the view.
     }
     
 
     
-    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        let firstVC = tabBarController.viewControllers?[1] as! UINavigationController
+        firstVC.popToRootViewController(animated: false)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

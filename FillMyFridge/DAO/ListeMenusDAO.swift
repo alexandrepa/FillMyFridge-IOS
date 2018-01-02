@@ -25,6 +25,7 @@ class ListeMenusDAO {
             for menu in listeMenus.menus{
                 menuDAO.createMenu(menu)
             }
+            listeMenus.id = Int(id)
         } catch {
             print(error)
         }

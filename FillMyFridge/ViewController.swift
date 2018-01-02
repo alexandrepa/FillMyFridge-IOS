@@ -21,16 +21,18 @@ class ViewController: UIViewController {
             SQLHelper.connect()
             SQLHelper.createDatabases()
         }
-        let platDAO = PlatDAO(1)
-        /*let plat = Plat(1, "", [Ingredient](), [Tag]())
-        platDAO.addPlat(plat)*/
-        var tags = [Tag]()
-        tags.append(Tag(1, ""))
-        print(String(describing: platDAO.findPlatByTag(tags)))
         
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    @IBAction func onButtonCreate(_ sender: Any) {
+        self.tabBarController?.selectedIndex = 1
+    }
+    @IBAction func onButtonShow(_ sender: Any) {
+        self.tabBarController?.selectedIndex = 2
+    }
+    
+    @IBOutlet weak var buttonCreate: UIButton!
+    @IBOutlet weak var buttonShowList: UIButton!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

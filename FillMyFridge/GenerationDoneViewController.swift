@@ -14,8 +14,8 @@ class GenerationDoneViewController: UIViewController {
         super.viewDidLoad()
         print("generate :"+String(describing: listeMenus))
         let listeMenusDAO = ListeMenusDAO()
-        listeMenusDAO.createListeMenus(listeMenus)
-
+        let listeBDD = listeMenusDAO.createListeMenus(listeMenus)
+        listeMenus = listeMenusDAO.getListeMenus(listeBDD.id)
         // Do any additional setup after loading the view.
     }
 
@@ -23,8 +23,11 @@ class GenerationDoneViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! ListeDeCourseTableViewController
+        destinationVC.listeMenus = listeMenus
+    }
     
-
     /*
     // MARK: - Navigation
 
