@@ -13,17 +13,21 @@ class PersonNumberTableViewController: UITableViewController {
     var menu : Menu!
     var nbRow : Int = 1
     var lastOne : Bool = false
+    var indexMenu = 0
 
     @IBAction func ValueChangedSlider(_ sender: UISlider) {
         sender.setValue(sender.value.rounded(.down), animated: true)
         let cell = sender.superview?.superview as! UITableViewCell
         let indexPath = tableView.indexPath(for: cell)
         menu.repas[indexPath![1]].numberOfPersonnes = Int(sender.value)
+        var label = sender.superview?.viewWithTag(15) as! UILabel
+        label.text = String(Int(sender.value))
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         //print("ListeMenu:"+String(listeMenus.menus[1].repas.count))
-        var indexMenu:Int = 0
+        indexMenu = 0
         while listeMenus.menus.count>indexMenu && listeMenus.menus[indexMenu].repas[0].numberOfPersonnes != 0 {
             indexMenu = indexMenu + 1
         }
@@ -87,6 +91,19 @@ class PersonNumberTableViewController: UITableViewController {
             let destinationVC = segue.destination as! TagTableViewController
             destinationVC.listeMenus = listeMenus
         }
+    }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if(identifier == "PersonNumberAgainSegue"){
+            indexMenu = 0
+            while listeMenus.menus.count>indexMenu && listeMenus.menus[indexMenu].repas[0].numberOfPersonnes != 0 {
+                indexMenu = indexMenu + 1
+            }
+            if indexMenu == listeMenus.menus.count {
+                performSegue(withIdentifier: "TagSegue", sender: self)
+                return false
+            }
+        }
+        return true
     }
     
 

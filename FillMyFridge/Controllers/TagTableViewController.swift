@@ -13,11 +13,12 @@ class TagTableViewController: UITableViewController {
     var menu : Menu!
     var nbRow : Int = 1
     var lastOne : Bool = false
+    var indexMenu = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var indexMenu:Int = 0
+        indexMenu = 0
         while listeMenus.menus.count>indexMenu && listeMenus.menus[indexMenu].repas[0].id != 0 {
             indexMenu = indexMenu + 1
         }
@@ -91,6 +92,20 @@ class TagTableViewController: UITableViewController {
             let destinationVC = segue.destination as! GenerationDoneViewController
             destinationVC.listeMenus = listeMenus
         }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if(identifier == "TagAgainSegue"){
+            indexMenu = 0
+            while listeMenus.menus.count>indexMenu && listeMenus.menus[indexMenu].repas[0].id != 0 {
+                indexMenu = indexMenu + 1
+            }
+            if indexMenu == listeMenus.menus.count {
+                performSegue(withIdentifier: "generationDoneSegue", sender: self)
+                return false
+            }
+        }
+        return true
     }
  
 

@@ -23,6 +23,8 @@ class MealNumberTableViewController: UITableViewController {
             repas.append(Repas("Repas n°"+String(i), 0, Int(i)))
         }
         listeMenus.menus[indexPath![1]].repas = repas
+        var label = sender.superview?.viewWithTag(15) as! UILabel
+        label.text = String(Int(sender.value))
     }
     
     override func viewDidLoad() {

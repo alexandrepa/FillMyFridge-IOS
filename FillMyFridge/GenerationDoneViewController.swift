@@ -28,6 +28,9 @@ class GenerationDoneViewController: UIViewController {
         destinationVC.listeMenus = listeMenus
     }
     
+    @IBAction func showAccueil(_ sender: Any) {
+        self.tabBarController?.selectedIndex = 0
+    }
     /*
     // MARK: - Navigation
 
