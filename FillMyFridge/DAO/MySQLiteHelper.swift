@@ -26,6 +26,7 @@ class MySQLiteHelper {
     func connect() -> Connection {
         do {
             try db = try Connection(pathString)
+            try db.key("VLBGQJPDW")
             print(pathString)
         } catch {
             print(error)
